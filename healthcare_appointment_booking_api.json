@@ -1,0 +1,730 @@
+{
+	"info": {
+		"_postman_id": "525d5307-20b6-4e3a-acae-4de87e2ee3a6",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25393725",
+		"_collection_link": "https://speeding-eclipse-55590.postman.co/workspace/sachin/collection/25393725-525d5307-20b6-4e3a-acae-4de87e2ee3a6?action=share&source=collection_link&creator=25393725"
+	},
+	"item": [
+		{
+			"name": "user registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user\":\n    {\n        \"email\": \"test@gmail.com\",\n        \"name\": \"test demo\",\n        \"password\": \"qwerty\",\n        \"phone_number\": \"919999998569\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/users",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user registration",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\":\n    {\n        \"email\": \"test@gmail.com\",\n        \"name\": \"test demo\",\n        \"password\": \"qwerty\",\n        \"phone_number\": \"919999998569\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/users",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"8d3a566999464d91af6cd7f1c2a35790\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "8e20e4ab-3df1-47c5-9414-10b7e94a769b"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "1.237173"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=21.84, start_processing.action_controller;dur=0.14, process_action.action_controller;dur=1125.42"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 10,\n        \"name\": \"test demo\",\n        \"email\": \"test@gmail.com\",\n        \"phone_number\": \"919999998569\",\n        \"password_digest\": \"$2a$12$L5Kcu7shwEk3XyTBrgLmge.xQL1GVXb0rUBz3bovbmCU48nGWWUzO\",\n        \"created_at\": \"2023-12-11T17:04:57.628Z\",\n        \"updated_at\": \"2023-12-11T17:04:57.628Z\"\n    },\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMCwicGhvbmVfbnVtYmVyIjoiOTE5OTk5OTk4NTY5In0.oRSmJ_e4C0jjnpauOKlDsEz1eiqaLZAQADxSOwCgjrA\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\": \"919999998569\",\n    \"password\": \"qwerty\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/login",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all HealthcareProfessionals",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJwaG9uZV9udW1iZXIiOiI5MTk5OTk5OTg1NjkifQ.UVYQuG4ig8hoZwsy0BdGtU7JnmgcJKo-Ygno2sj8Ql0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/healthcare_professionals",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"healthcare_professionals"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "all HealthcareProfessionals",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/healthcare_professionals",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthcare_professionals"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"51e008a06c2e378319d7e76ec41d2a0d\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "877389bf-0ab0-42d9-9bdb-fb146390fb22"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.136550"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "sql.active_record;dur=16.42, start_processing.action_controller;dur=0.09, instantiation.active_record;dur=25.63, process_action.action_controller;dur=62.86"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Dr. Vijay\",\n        \"specialization\": \"Eye Specialist\",\n        \"email\": \"vijay@gmail.com\",\n        \"phone_number\": \"919988888889\",\n        \"created_at\": \"2023-12-11T17:36:37.960Z\",\n        \"updated_at\": \"2023-12-11T17:36:37.960Z\",\n        \"professional_availabilities\": [\n            {\n                \"id\": 1,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:30:52.337Z\",\n                \"updated_at\": \"2023-12-12T05:30:52.337Z\"\n            },\n            {\n                \"id\": 2,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T17:00:00.000Z\",\n                \"available_to\": \"2000-01-01T20:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:30:52.345Z\",\n                \"updated_at\": \"2023-12-12T05:30:52.345Z\"\n            },\n            {\n                \"id\": 3,\n                \"day\": \"Tuesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T19:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:30:52.355Z\",\n                \"updated_at\": \"2023-12-12T05:30:52.355Z\"\n            },\n            {\n                \"id\": 4,\n                \"day\": \"Wednesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:30:52.364Z\",\n                \"updated_at\": \"2023-12-12T05:30:52.364Z\"\n            },\n            {\n                \"id\": 5,\n                \"day\": \"Thursday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:30:52.376Z\",\n                \"updated_at\": \"2023-12-12T05:30:52.376Z\"\n            },\n            {\n                \"id\": 6,\n                \"day\": \"Friday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:30:52.386Z\",\n                \"updated_at\": \"2023-12-12T05:30:52.386Z\"\n            },\n            {\n                \"id\": 7,\n                \"day\": \"Saturday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:30:52.396Z\",\n                \"updated_at\": \"2023-12-12T05:30:52.396Z\"\n            },\n            {\n                \"id\": 8,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:32:19.267Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.267Z\"\n            },\n            {\n                \"id\": 9,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T17:00:00.000Z\",\n                \"available_to\": \"2000-01-01T20:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:32:19.277Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.277Z\"\n            },\n            {\n                \"id\": 10,\n                \"day\": \"Tuesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T19:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:32:19.287Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.287Z\"\n            },\n            {\n                \"id\": 11,\n                \"day\": \"Wednesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:32:19.298Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.298Z\"\n            },\n            {\n                \"id\": 12,\n                \"day\": \"Thursday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:32:19.309Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.309Z\"\n            },\n            {\n                \"id\": 13,\n                \"day\": \"Friday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:32:19.321Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.321Z\"\n            },\n            {\n                \"id\": 14,\n                \"day\": \"Saturday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 1,\n                \"created_at\": \"2023-12-12T05:32:19.333Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.333Z\"\n            }\n        ]\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Dr. Arvind\",\n        \"specialization\": \"Heart Specialist\",\n        \"email\": \"arvind@gmail.com\",\n        \"phone_number\": \"919888888889\",\n        \"created_at\": \"2023-12-11T17:36:37.977Z\",\n        \"updated_at\": \"2023-12-11T17:36:37.977Z\",\n        \"professional_availabilities\": [\n            {\n                \"id\": 15,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 2,\n                \"created_at\": \"2023-12-12T05:32:19.349Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.349Z\"\n            },\n            {\n                \"id\": 16,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T17:00:00.000Z\",\n                \"available_to\": \"2000-01-01T20:00:00.000Z\",\n                \"healthcare_professional_id\": 2,\n                \"created_at\": \"2023-12-12T05:32:19.360Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.360Z\"\n            },\n            {\n                \"id\": 17,\n                \"day\": \"Tuesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T19:00:00.000Z\",\n                \"healthcare_professional_id\": 2,\n                \"created_at\": \"2023-12-12T05:32:19.372Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.372Z\"\n            },\n            {\n                \"id\": 18,\n                \"day\": \"Wednesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 2,\n                \"created_at\": \"2023-12-12T05:32:19.384Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.384Z\"\n            },\n            {\n                \"id\": 19,\n                \"day\": \"Thursday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 2,\n                \"created_at\": \"2023-12-12T05:32:19.403Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.403Z\"\n            },\n            {\n                \"id\": 20,\n                \"day\": \"Friday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 2,\n                \"created_at\": \"2023-12-12T05:32:19.411Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.411Z\"\n            },\n            {\n                \"id\": 21,\n                \"day\": \"Saturday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 2,\n                \"created_at\": \"2023-12-12T05:32:19.420Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.420Z\"\n            }\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Dr. Praveen\",\n        \"specialization\": \"Diabetologist and General Physician\",\n        \"email\": \"praveen@gmail.com\",\n        \"phone_number\": \"919988988889\",\n        \"created_at\": \"2023-12-11T17:36:37.988Z\",\n        \"updated_at\": \"2023-12-11T17:36:37.988Z\",\n        \"professional_availabilities\": [\n            {\n                \"id\": 22,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 3,\n                \"created_at\": \"2023-12-12T05:32:19.429Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.429Z\"\n            },\n            {\n                \"id\": 23,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T17:00:00.000Z\",\n                \"available_to\": \"2000-01-01T20:00:00.000Z\",\n                \"healthcare_professional_id\": 3,\n                \"created_at\": \"2023-12-12T05:32:19.439Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.439Z\"\n            },\n            {\n                \"id\": 24,\n                \"day\": \"Tuesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T19:00:00.000Z\",\n                \"healthcare_professional_id\": 3,\n                \"created_at\": \"2023-12-12T05:32:19.447Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.447Z\"\n            },\n            {\n                \"id\": 25,\n                \"day\": \"Wednesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 3,\n                \"created_at\": \"2023-12-12T05:32:19.456Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.456Z\"\n            },\n            {\n                \"id\": 26,\n                \"day\": \"Thursday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 3,\n                \"created_at\": \"2023-12-12T05:32:19.467Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.467Z\"\n            },\n            {\n                \"id\": 27,\n                \"day\": \"Friday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 3,\n                \"created_at\": \"2023-12-12T05:32:19.479Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.479Z\"\n            },\n            {\n                \"id\": 28,\n                \"day\": \"Saturday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 3,\n                \"created_at\": \"2023-12-12T05:32:19.490Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.490Z\"\n            }\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Dr. Deepak\",\n        \"specialization\": \"Eye Specialist\",\n        \"email\": \"vijay@gmail.com\",\n        \"phone_number\": \"919898888889\",\n        \"created_at\": \"2023-12-11T17:36:37.999Z\",\n        \"updated_at\": \"2023-12-11T17:36:37.999Z\",\n        \"professional_availabilities\": []\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Dr. Deepak\",\n        \"specialization\": \"Eye Specialist\",\n        \"email\": \"deepak@gmail.com\",\n        \"phone_number\": \"919898888889\",\n        \"created_at\": \"2023-12-11T17:37:04.627Z\",\n        \"updated_at\": \"2023-12-11T17:37:04.627Z\",\n        \"professional_availabilities\": [\n            {\n                \"id\": 29,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 5,\n                \"created_at\": \"2023-12-12T05:32:19.505Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.505Z\"\n            },\n            {\n                \"id\": 30,\n                \"day\": \"Monday\",\n                \"available_from\": \"2000-01-01T17:00:00.000Z\",\n                \"available_to\": \"2000-01-01T20:00:00.000Z\",\n                \"healthcare_professional_id\": 5,\n                \"created_at\": \"2023-12-12T05:32:19.517Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.517Z\"\n            },\n            {\n                \"id\": 31,\n                \"day\": \"Tuesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T19:00:00.000Z\",\n                \"healthcare_professional_id\": 5,\n                \"created_at\": \"2023-12-12T05:32:19.531Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.531Z\"\n            },\n            {\n                \"id\": 32,\n                \"day\": \"Wednesday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 5,\n                \"created_at\": \"2023-12-12T05:32:19.544Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.544Z\"\n            },\n            {\n                \"id\": 33,\n                \"day\": \"Thursday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 5,\n                \"created_at\": \"2023-12-12T05:32:19.556Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.556Z\"\n            },\n            {\n                \"id\": 34,\n                \"day\": \"Friday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T18:00:00.000Z\",\n                \"healthcare_professional_id\": 5,\n                \"created_at\": \"2023-12-12T05:32:19.567Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.567Z\"\n            },\n            {\n                \"id\": 35,\n                \"day\": \"Saturday\",\n                \"available_from\": \"2000-01-01T10:00:00.000Z\",\n                \"available_to\": \"2000-01-01T14:00:00.000Z\",\n                \"healthcare_professional_id\": 5,\n                \"created_at\": \"2023-12-12T05:32:19.579Z\",\n                \"updated_at\": \"2023-12-12T05:32:19.579Z\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "create appointments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJwaG9uZV9udW1iZXIiOiI5MTk5OTk5OTg1NjkifQ.UVYQuG4ig8hoZwsy0BdGtU7JnmgcJKo-Ygno2sj8Ql0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"appointment\": \n    {\n        \"appointment_start_time\": \"12/12/2023 11 AM\",\n        \"appointment_end_time\": \"12/12/2023 11:30 AM\",\n        \"healthcare_professional_id\": 1,\n        \"professional_availability_id\": 43\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/v1/appointments",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"appointments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "create appointments",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"appointment\": \n    {\n        \"appointment_start_time\": \"12/12/2023 11 AM\",\n        \"appointment_end_time\": \"12/12/2023 11:30 AM\",\n        \"healthcare_professional_id\": 1,\n        \"professional_availability_id\": 38\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/appointments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointments"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"088e6c16f0b495ea848e36f17f51a8e2\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "52736a8a-35cf-4f6a-8bc4-711459e02a79"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.076122"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.09, sql.active_record;dur=20.64, instantiation.active_record;dur=6.90, process_action.action_controller;dur=43.30"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Appointment booked!\",\n    \"data\": {\n        \"id\": 13,\n        \"appointment_start_time\": \"2023-12-12T11:00:00.000Z\",\n        \"appointment_end_time\": \"2023-12-12T11:30:00.000Z\",\n        \"status\": \"booked\",\n        \"healthcare_professional_id\": 1,\n        \"user_id\": 5,\n        \"created_at\": \"2023-12-12T08:05:34.287Z\",\n        \"updated_at\": \"2023-12-12T08:05:34.287Z\",\n        \"professional_availability_id\": 38\n    }\n}"
+				},
+				{
+					"name": "create appointments",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"appointment\": \n    {\n        \"appointment_start_time\": \"12/12/2023 11 AM\",\n        \"appointment_end_time\": \"12/12/2023 11:30 AM\",\n        \"healthcare_professional_id\": 1,\n        \"professional_availability_id\": 43\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/appointments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"appointments"
+							]
+						}
+					},
+					"status": "Unprocessable Entity",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "faf90f8f-af4f-4ca8-8873-362f0a402f71"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.012483"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.15, sql.active_record;dur=4.67, instantiation.active_record;dur=0.45, process_action.action_controller;dur=9.90"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"This slot is not available!\"\n}"
+				}
+			]
+		},
+		{
+			"name": "available slotes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJwaG9uZV9udW1iZXIiOiI5MTk5OTk5OTg1NjkifQ.UVYQuG4ig8hoZwsy0BdGtU7JnmgcJKo-Ygno2sj8Ql0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/healthcare_professionals/1/available_slotes?date=12/12/2023",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"healthcare_professionals",
+						"1",
+						"available_slotes"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "12/12/2023"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "available slotes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/healthcare_professionals/2/available_slotes?date=11/12/2023",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"healthcare_professionals",
+								"2",
+								"available_slotes"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "11/12/2023"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"377f33459c5aca2263de67e21586e2a4\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "b3b35ce6-d7e8-4365-b70d-11e2d2006404"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.059308"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.15, sql.active_record;dur=7.82, instantiation.active_record;dur=7.28, process_action.action_controller;dur=21.50"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"10:00:00 - 10:30:00\",\n    \"10:30:00 - 11:00:00\",\n    \"11:00:00 - 11:30:00\",\n    \"11:30:00 - 12:00:00\",\n    \"12:00:00 - 12:30:00\",\n    \"12:30:00 - 13:00:00\",\n    \"13:00:00 - 13:30:00\",\n    \"13:30:00 - 14:00:00\",\n    \"17:00:00 - 17:30:00\",\n    \"17:30:00 - 18:00:00\",\n    \"18:00:00 - 18:30:00\",\n    \"18:30:00 - 19:00:00\",\n    \"19:00:00 - 19:30:00\",\n    \"19:30:00 - 20:00:00\"\n]"
+				}
+			]
+		},
+		{
+			"name": "user appointments",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo1LCJwaG9uZV9udW1iZXIiOiI5MTk5OTk5OTg1NjkifQ.UVYQuG4ig8hoZwsy0BdGtU7JnmgcJKo-Ygno2sj8Ql0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/api/v1/users/appointment_list?status=booked",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"appointment_list"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "booked",
+							"description": "booked, cancelled, completed"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "user appointments",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/users/appointment_list?status=booked",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"appointment_list"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "booked",
+									"description": "booked, cancelled, completed"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ed3306584615a14b20c5807a868267e2\""
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "X-Request-Id",
+							"value": "2b5b4f6e-2161-427a-a1f5-045f21b7340d"
+						},
+						{
+							"key": "X-Runtime",
+							"value": "0.019423"
+						},
+						{
+							"key": "Server-Timing",
+							"value": "start_processing.action_controller;dur=0.17, sql.active_record;dur=5.54, instantiation.active_record;dur=0.23, process_action.action_controller;dur=14.98"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 13,\n        \"appointment_start_time\": \"2023-12-12T11:00:00.000Z\",\n        \"appointment_end_time\": \"2023-12-12T11:30:00.000Z\",\n        \"status\": \"booked\",\n        \"healthcare_professional_id\": 1,\n        \"user_id\": 5,\n        \"created_at\": \"2023-12-12T08:05:34.287Z\",\n        \"updated_at\": \"2023-12-12T08:05:34.287Z\",\n        \"professional_availability_id\": 38\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "cancel appointment",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "mark_complete",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
