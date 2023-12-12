@@ -5,7 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version - 2.7.2
+
+Configure mysql database
+run rails db:create db:migrate db:seed 
+
 
 * System dependencies
 
